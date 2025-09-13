@@ -1,7 +1,7 @@
 {
-  "name": "@stash-ui/angular-regular-icons",
+  "name": "@fredbnm/angular-regular-icons",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.6",
   "license": "MIT",
   "description": "Angular Regular Icons Set",
   "authors": [
@@ -10,7 +10,7 @@
   ],
   "ngPackage": {
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-    "dest": "../../dist/angular-regular-icons",
+    "dest": "./dist",
     "lib": {
       "entryFile": "src/public-api.ts"
     }
@@ -26,10 +26,16 @@
   "sideEffects": false,
   "files": [
     "dist/",
-    "README.md"
+    "README.md",
+    "src/"
   ],
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fredbnm/icons.git"
   },
   "scripts": {
     "build": "ng-packagr -p ng-package.json",
@@ -37,20 +43,20 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@angular/core": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
-    "@angular/common": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
-    "rxjs": "^6.5.0 || ^7.0.0"
+    "@angular/core": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0",
+    "@angular/common": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0",
+    "rxjs": "^6.5.0 || ^7.0.0 || ^8.0.0"
   },
   "devDependencies": {
-    "@angular/animations": "^18.0.0",
-    "@angular/common": "^18.0.0",
-    "@angular/compiler": "^18.0.0",
-    "@angular/compiler-cli": "^18.0.0",
-    "@angular/core": "^18.0.0",
-    "@angular/platform-browser": "^18.0.0",
-    "ng-packagr": "^18.0.0",
+    "@angular/animations": "^20.1.0",
+    "@angular/common": "^20.1.0",
+    "@angular/compiler": "^20.1.0",
+    "@angular/compiler-cli": "^20.1.0",
+    "@angular/core": "^20.1.0",
+    "@angular/platform-browser": "^20.1.0",
+    "ng-packagr": "^20.1.0",
     "rxjs": "~7.8.0",
-    "typescript": "~5.4.0",
-    "zone.js": "~0.14.0"
+    "typescript": "~5.8.0",
+    "zone.js": "~0.15.0"
   }
 }

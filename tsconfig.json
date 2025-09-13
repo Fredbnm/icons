@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "lib": ["es2015", "dom"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "module": "ES2022",
+    "moduleResolution": "bundler",
     "declaration": true,
     "declarationMap": true,
+    "sourceMap": true,
     "inlineSources": true,
     "strict": true,
     "noImplicitAny": true,
@@ -22,7 +23,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "useDefineForClassFields": false
   },
   "exclude": [
     "node_modules",

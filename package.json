@@ -6,7 +6,10 @@
   ],
   "scripts": {
     "convert:angular": "node convert-to-angular.js",
-    "build:angular": "npm run convert:angular && cd packages/angular-regular && npm run build && cd ../angular-solid && npm run build"
+    "build:angular": "npm run convert:angular && cd packages/angular-regular && npm run build && cd ../angular-solid && npm run build",
+    "publish:local": "node publish-local.js",
+    "publish:github": "node publish-github.js",
+    "publish:private": "npm run build:angular && npm run publish:local"
   },
   "devDependencies": {
     "@angular/compiler": "^20.3.0",

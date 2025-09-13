@@ -1,62 +1,188 @@
-![Stash Icons Cover](https://res.cloudinary.com/pingback/image/upload/v1667487739/stash-assets/stash-icons-cover_ay28jg.png)
+# @fredbnm/angular-icons
 
-<div align="center"><strong>Stash Icons</strong></div>
-<div align="center">A gorgeous set of 24x24 icons.<br />Designed by the <a href="https://pingback.com">Pingback team</a>.</div>
-<br />
-<div align="center">
-<a href="https://icons.stash-ui.com">Website</a> 
-<span> · </span>
-<a href="https://github.com/stash-ui/icons">GitHub</a> 
-<span> · </span>
-<a href="https://www.figma.com/file/X5DiJzGRQXCyEfBqocT235/%5BPb%5D-Icons-1.0-%E2%9C%85?node-id=0%3A1">Figma</a>
-<span> · </span>
-<a href="https://stash-ui.com/discord">Discord</a>
-</div>
+Biblioteca de ícones Angular compatível com Angular 20+.
 
-## Introduction
+## 📦 Pacotes Disponíveis
 
-A collection of high-quality and well designed SVG icons for React, Angular, and React Native applications.
+- `@fredbnm/angular-regular-icons` - Ícones em estilo regular
+- `@fredbnm/angular-solid-icons` - Ícones em estilo solid
 
-## Style variations
+## 🚀 Instalação
 
-There are 7 different style variations and can be installed separately.
-For install documentation, check each one:
+### 1. Gerar Token de Acesso GitHub
 
-### React Packages
-- [Duotone](https://github.com/stash-ui/icons/tree/master/packages/duotone)
-- [Light](https://github.com/stash-ui/icons/tree/master/packages/light)
-- [Regular](https://github.com/stash-ui/icons/tree/master/packages/regular)
-- [Solid](https://github.com/stash-ui/icons/tree/master/packages/solid)
-- [Editor](https://github.com/stash-ui/icons/tree/master/packages/editor)
+Cada desenvolvedor precisa criar seu próprio token de acesso:
 
-### Angular Packages
-- [Angular Regular](https://github.com/stash-ui/icons/tree/master/packages/angular-regular)
-- [Angular Solid](https://github.com/stash-ui/icons/tree/master/packages/angular-solid)
+1. **Acesse**: [GitHub Settings](https://github.com/settings/tokens)
+2. **Vá para**: Developer settings → Personal access tokens → Tokens (classic)
+3. **Clique**: "Generate new token" → "Generate new token (classic)"
+4. **Configure**:
+   - **Note**: "NPM Package Access"
+   - **Expiration**: Escolha a duração (ex: 90 days)
+   - **Scopes**: Marque apenas `✅ read:packages`
+5. **Clique**: "Generate token"
+6. **COPIE** o token imediatamente (você só verá uma vez!)
 
-### React Native Packages
-- [React Native](https://github.com/stash-ui/icons/tree/master/packages/react-native)
-- [React Native Regular](https://github.com/stash-ui/icons/tree/master/packages/react-native-regular)
+### 2. Configurar o Projeto
 
-## Development Scripts
-
-For contributors working on the Angular packages:
+No diretório do seu projeto Angular, crie um arquivo `.npmrc`:
 
 ```bash
-# Convert React icons to Angular components
-npm run convert:angular
-
-# Build all Angular packages
-npm run build:angular
+# Criar arquivo .npmrc
+echo "@fredbnm:registry=https://npm.pkg.github.com" >> .npmrc
+echo "//npm.pkg.github.com/:_authToken=SEU_TOKEN_AQUI" >> .npmrc
 ```
 
-## Authors
+**⚠️ IMPORTANTE**: Substitua `SEU_TOKEN_AQUI` pelo token que você gerou no passo anterior.
 
-- Rachel Andrade ([@rchldesigner](https://twitter.com/rchldesigner)) - [Pingback](https://pingback.com)
-- Pedro Ladeira ([@pedrooladeira](https://twitter.com/pedrooladeira)) - [Pingback](https://pingback.com)
-- Tiago Gerken ([@tgerken](https://twitter.com/tgerken))
+### 3. Instalar a Biblioteca
 
-## License
+```bash
+# Instalar os pacotes
+npm install @fredbnm/angular-regular-icons @fredbnm/angular-solid-icons
 
-Licensed under the MIT License, Copyright © 2022-present Pingback LLC.
+# Ou instalar apenas um
+npm install @fredbnm/angular-regular-icons
+```
 
-See [LICENSE](./LICENSE) for more information.
+### 4. Verificar Instalação
+
+Para testar se está funcionando:
+
+```bash
+# Verificar se consegue acessar os pacotes
+npm view @fredbnm/angular-regular-icons
+npm view @fredbnm/angular-solid-icons
+```
+
+## 💻 Como Usar
+
+### Importar o Componente
+
+```typescript
+import { Component } from '@angular/core';
+import { DashboardIconComponent } from '@fredbnm/angular-regular-icons';
+
+@Component({
+  selector: 'app-example',
+  standalone: true,
+  imports: [DashboardIconComponent],
+  template: `
+    <stash-dashboard></stash-dashboard>
+  `
+})
+export class ExampleComponent {}
+```
+
+### Usar no Template
+
+```html
+<!-- Ícone de Dashboard -->
+<stash-dashboard></stash-dashboard>
+
+<!-- Outros ícones disponíveis -->
+<stash-home></stash-home>
+<stash-user></stash-user>
+<stash-settings></stash-settings>
+```
+
+## 🎨 Ícones Disponíveis
+
+### Regular Icons
+- `stash-dashboard` - Dashboard
+- `stash-home` - Home
+- `stash-user` - Usuário
+- `stash-settings` - Configurações
+- `stash-search` - Pesquisa
+- `stash-bell` - Notificações
+- E muitos outros...
+
+### Solid Icons
+- `stash-dashboard` - Dashboard (solid)
+- `stash-home` - Home (solid)
+- `stash-user` - Usuário (solid)
+- E todos os ícones em versão solid...
+
+## 🔧 Troubleshooting
+
+### Erro: "Cannot find module"
+```bash
+# Verificar se o .npmrc está correto
+cat .npmrc
+
+# Deve mostrar:
+# @fredbnm:registry=https://npm.pkg.github.com
+# //npm.pkg.github.com/:_authToken=seu_token
+```
+
+### Erro: "401 Unauthorized"
+- Verifique se o token está correto
+- Verifique se o token tem permissão `read:packages`
+- Gere um novo token se necessário
+
+### Erro: "404 Not Found"
+- Verifique se o nome do pacote está correto
+- Verifique se você tem acesso ao repositório
+
+## 📋 Exemplo Completo
+
+```typescript
+// app.component.ts
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { 
+  DashboardIconComponent,
+  HomeIconComponent,
+  UserIconComponent 
+} from '@fredbnm/angular-regular-icons';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    DashboardIconComponent,
+    HomeIconComponent,
+    UserIconComponent
+  ],
+  template: `
+    <nav>
+      <a routerLink="/dashboard">
+        <stash-dashboard></stash-dashboard>
+        Dashboard
+      </a>
+      <a routerLink="/home">
+        <stash-home></stash-home>
+        Home
+      </a>
+      <a routerLink="/profile">
+        <stash-user></stash-user>
+        Perfil
+      </a>
+    </nav>
+    <router-outlet></router-outlet>
+  `
+})
+export class AppComponent {}
+```
+
+## 🆘 Suporte
+
+Se encontrar problemas:
+
+1. Verifique se seguiu todos os passos de instalação
+2. Confirme que o token tem as permissões corretas
+3. Teste com `npm view @fredbnm/angular-regular-icons`
+4. Entre em contato com o administrador do projeto
+
+## 📄 Licença
+
+MIT License - veja o arquivo LICENSE para detalhes.
+
+---
+
+**Versão**: 1.0.7  
+**Compatibilidade**: Angular 20+  
+**Última atualização**: Setembro 2025
