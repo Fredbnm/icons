@@ -4,6 +4,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "convert:angular": "node convert-to-angular.js",
+    "build:angular": "npm run convert:angular && cd packages/angular-regular && npm run build && cd ../angular-solid && npm run build"
+  },
   "devDependencies": {
     "@angular/compiler": "^20.3.0",
     "@angular/compiler-cli": "^20.3.0",

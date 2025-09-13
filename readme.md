@@ -37,6 +37,18 @@ For install documentation, check each one:
 - [React Native](https://github.com/stash-ui/icons/tree/master/packages/react-native)
 - [React Native Regular](https://github.com/stash-ui/icons/tree/master/packages/react-native-regular)
 
+## Development Scripts
+
+For contributors working on the Angular packages:
+
+```bash
+# Convert React icons to Angular components
+npm run convert:angular
+
+# Build all Angular packages
+npm run build:angular
+```
+
 ## Authors
 
 - Rachel Andrade ([@rchldesigner](https://twitter.com/rchldesigner)) - [Pingback](https://pingback.com)
