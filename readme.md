@@ -15,18 +15,27 @@
 
 ## Introduction
 
-A collection of high-quality and well designed SVG icons using React and TypeScript.
+A collection of high-quality and well designed SVG icons for React, Angular, and React Native applications.
 
 ## Style variations
 
-There are 5 different styles variations and can be installed it separately.
+There are 7 different style variations and can be installed separately.
 For install documentation, check each one:
 
+### React Packages
 - [Duotone](https://github.com/stash-ui/icons/tree/master/packages/duotone)
 - [Light](https://github.com/stash-ui/icons/tree/master/packages/light)
 - [Regular](https://github.com/stash-ui/icons/tree/master/packages/regular)
 - [Solid](https://github.com/stash-ui/icons/tree/master/packages/solid)
 - [Editor](https://github.com/stash-ui/icons/tree/master/packages/editor)
+
+### Angular Packages
+- [Angular Regular](https://github.com/stash-ui/icons/tree/master/packages/angular-regular)
+- [Angular Solid](https://github.com/stash-ui/icons/tree/master/packages/angular-solid)
+
+### React Native Packages
+- [React Native](https://github.com/stash-ui/icons/tree/master/packages/react-native)
+- [React Native Regular](https://github.com/stash-ui/icons/tree/master/packages/react-native-regular)
 
 ## Authors
 

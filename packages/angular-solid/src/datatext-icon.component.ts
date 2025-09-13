@@ -1,0 +1,33 @@
+import { Component, Input } from '@angular/core';
+import { IconProps } from './types';
+
+@Component({
+  selector: 'stash-datatext',
+  template: `<svg
+      [attr.width]="width"
+      [attr.height]="height"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      [class]="className"
+      [style]="style"
+      [attr.color]="color"
+    >
+
+        <path
+          d="M6.814 7.10472C6.98414 6.59429 7.46181 6.25 7.99985 6.25H8.74985C9.28789 6.25 9.76556 6.59429 9.9357 7.10472L12.9357 16.1047C13.154 16.7596 12.8001 17.4675 12.1451 17.6859C11.4902 17.9042 10.7823 17.5502 10.564 16.8953L10.0989 15.5H6.6508L6.1857 16.8953C5.9674 17.5502 5.2595 17.9042 4.60457 17.6859C3.94964 17.4675 3.59569 16.7596 3.814 16.1047L6.814 7.10472ZM7.48413 13H9.26557L8.37485 10.3278L7.48413 13ZM16.3749 11.75C15.767 11.75 14.9999 12.3715 14.9999 13.5C14.9999 14.6285 15.767 15.25 16.3749 15.25C16.9827 15.25 17.7499 14.6285 17.7499 13.5C17.7499 12.3715 16.9827 11.75 16.3749 11.75ZM18.0672 9.66768C17.567 9.4022 16.997 9.25 16.3749 9.25C14.0832 9.25 12.4999 11.3148 12.4999 13.5C12.4999 15.6852 14.0832 17.75 16.3749 17.75C16.997 17.75 17.567 17.5978 18.0672 17.3323C18.2962 17.5886 18.6292 17.75 18.9999 17.75C19.6902 17.75 20.2499 17.1904 20.2499 16.5V10.5C20.2499 9.80964 19.6902 9.25 18.9999 9.25C18.6292 9.25 18.2962 9.41136 18.0672 9.66768Z"
+          [attr.fill]="color"
+          fillRule="evenodd"
+          clipRule="evenodd"
+        />
+      
+    </svg>`,
+  standalone: true
+})
+export class DataTextIconComponent implements IconProps {
+  @Input() color: string = 'currentColor';
+  @Input() width: string | number = '24';
+  @Input() height: string | number = '24';
+  @Input() className?: string;
+  @Input() style?: { [key: string]: any };
+}

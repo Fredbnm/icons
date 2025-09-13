@@ -1,0 +1,56 @@
+{
+  "name": "@stash-ui/angular-regular-icons",
+  "private": false,
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Angular Regular Icons Set",
+  "authors": [
+    "Tiago Gerken <gerken@getpingback.com>",
+    "Pedro Ladeira <pedro@getpingback.com>"
+  ],
+  "ngPackage": {
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../../dist/angular-regular-icons",
+    "lib": {
+      "entryFile": "src/public-api.ts"
+    }
+  },
+  "main": "dist/angular-regular-icons.umd.js",
+  "module": "dist/angular-regular-icons.esm.js",
+  "es2015": "dist/angular-regular-icons.esm.js",
+  "esm5": "dist/angular-regular-icons.esm.js",
+  "fesm5": "dist/angular-regular-icons.esm.js",
+  "fesm2015": "dist/angular-regular-icons.esm.js",
+  "typings": "dist/angular-regular-icons.d.ts",
+  "metadata": "dist/angular-regular-icons.metadata.json",
+  "sideEffects": false,
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json",
+    "watch": "ng-packagr -p ng-package.json --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@angular/core": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
+    "@angular/common": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
+    "rxjs": "^6.5.0 || ^7.0.0"
+  },
+  "devDependencies": {
+    "@angular/animations": "^18.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/compiler-cli": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/platform-browser": "^18.0.0",
+    "ng-packagr": "^18.0.0",
+    "rxjs": "~7.8.0",
+    "typescript": "~5.4.0",
+    "zone.js": "~0.14.0"
+  }
+}
