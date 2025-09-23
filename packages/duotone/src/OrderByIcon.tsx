@@ -4,12 +4,18 @@ import { IconProps } from './types';
 export const OrderByIcon = React.forwardRef<SVGSVGElement, IconProps>(
   ({ color = 'currentColor', ...props }, forwardedRef) => {
     return (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}
+        ref={forwardedRef}
+      >
         <path
           d="M6.74271 4.78653C7.12474 4.40449 7.74414 4.40449 8.12618 4.78653L11.387 8.0474C11.7691 8.42943 11.7691 9.04883 11.387 9.43087C11.005 9.8129 10.3856 9.8129 10.0036 9.43087L8.4127 7.83999L8.41271 18.5217C8.41271 19.062 7.97473 19.5 7.43445 19.5C6.89417 19.5 6.45619 19.062 6.45619 18.5217L6.45618 7.83999L4.86531 9.43087C4.48327 9.8129 3.86387 9.8129 3.48184 9.43087C3.0998 9.04883 3.0998 8.42943 3.48184 8.0474L6.74271 4.78653Z"
           fill={color}
-          {...props}
-          ref={forwardedRef}
         />
         <path
           opacity="0.5"
