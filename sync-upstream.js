@@ -48,10 +48,10 @@ try {
   const newVersion = `${major}.${minor}.${patch + 1}`;
   
   // Atualizar versão regular
-  execSync(`cd packages/angular-regular && npm version ${newVersion} --no-git-tag-version`, { stdio: 'inherit' });
+  execSync(`cd packages/angular-regular && npm version ${newVersion} --no-git-tag-version --legacy-peer-deps`, { stdio: 'inherit' });
   
   // Atualizar versão solid
-  execSync(`cd packages/angular-solid && npm version ${newVersion} --no-git-tag-version`, { stdio: 'inherit' });
+  execSync(`cd packages/angular-solid && npm version ${newVersion} --no-git-tag-version --legacy-peer-deps`, { stdio: 'inherit' });
   
   console.log(`\n✅ Versão atualizada para ${newVersion}`);
   
