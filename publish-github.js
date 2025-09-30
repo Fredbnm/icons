@@ -35,3 +35,7 @@ console.log('\n📋 Next steps:');
 console.log('1. Create .npmrc in your app: echo "@fredbnm:registry=https://npm.pkg.github.com" >> .npmrc');
 console.log('2. Add GitHub token: echo "//npm.pkg.github.com/:_authToken=YOUR_TOKEN" >> .npmrc');
 console.log('3. Install: npm install @fredbnm/angular-regular-icons @fredbnm/angular-solid-icons');
+
+
+
+

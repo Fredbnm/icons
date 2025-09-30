@@ -89,3 +89,7 @@ export * from './types';`;
 
 // Executar a conversão
 convertAllIcons();
+
+
+
+

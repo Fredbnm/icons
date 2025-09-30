@@ -33,3 +33,6 @@ export class HomeIconComponent implements IconProps {
   @Input() className?: string;
   @Input() style?: { [key: string]: any };
 }
+
+
+

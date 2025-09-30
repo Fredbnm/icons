@@ -156,3 +156,6 @@ packages/angular-regular/
 ├── convert-icons.js              # Script de conversão
 └── README.md                     # Documentação
 ```
+
+
+
