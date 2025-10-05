@@ -16,10 +16,10 @@ packages/
 
 ### 1. Adicionar o Ícone Original
 
-Primeiro, adicione o ícone no pacote React original:
+Adicione o ícone no pacote React original:
 
 ```bash
-# Adicione o arquivo .tsx no pacote regular ou solid
+# É necessário adicionar um arquivo .tsx no pacote regular ou solid
 # Exemplo: packages/regular/src/NewIcon.tsx
 ```
 

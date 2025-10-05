@@ -1,4 +1,4 @@
-# 🚀 Quick Start - Angular Icons
+# Get Started - Angular Icons
 
 ## Instalação Rápida
 
